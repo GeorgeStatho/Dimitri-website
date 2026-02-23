@@ -1,2 +1,2 @@
 Website for me and friends to use with domains
-current domains up(derekc.huvle.org)
+current domains up(dimitric.huvle.org)
