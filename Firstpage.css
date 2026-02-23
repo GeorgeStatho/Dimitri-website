@@ -53,7 +53,7 @@ html, body, #root {
 
 
 .title-text{
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 96px;
     font-weight: 700;
     text-align: center;
@@ -68,13 +68,13 @@ html, body, #root {
     flex-direction: column;
     gap: 6px;
     max-width: 420px;
-    color: #817777;
+    color: #080707;
 }
 
 .socials{
     display: flex;
     gap: 8px;
-    color: #888;
+    color: #160c0c;
 }
 
 .icon{
@@ -90,7 +90,7 @@ html, body, #root {
   line-height: 1.45;
   letter-spacing: -0.36px;
   text-align: center;
-  color: #dfb7b7;
+  color: #000000;
   margin: 0;
 }
 
@@ -100,7 +100,7 @@ html, body, #root {
   font-size: 16px;
   line-height: 1.45;
   letter-spacing: -0.08px;
-  color: rgba(140, 148, 106, 0.55);
+  color: rgba(0, 0, 0, 0.55);
   margin: 0;
   max-width: 391px;
 }
@@ -149,7 +149,7 @@ html, body, #root {
 
 .image-item{
     width: 100%;
-    height: auto;
+    height: 260px;
     max-height: 320px;
     object-fit: contain;
 }
@@ -166,7 +166,7 @@ html, body, #root {
 .image-caption{
     font-family: "Jersey 25", "Inter", sans-serif;
   font-size: 24px;
-  color: #c93f3f;
+  color: #000000;
   margin: 0;
   margin-top: 8px;
   max-width: 260px;
@@ -237,7 +237,7 @@ html, body, #root {
 
   .image-grid{
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 25px;
     width: 100%;
     padding: 0 var(--circle-col-gap);
   }
