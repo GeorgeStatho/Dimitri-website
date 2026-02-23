@@ -30,14 +30,15 @@ let leftCircles = divWrapperElements(svgArray, {
 const rightCircles = divWrapperElements(svgArray, { className: "circle-item right-circle-col" }, 45);
 //end creating circles
 //images creating
-const images = [{ src: "./assets/dashboard.jpg", caption: "The man himself" },
+const images = [
+    { src: "./assets/dashboard.jpg", caption: "dashboard" },
     { src: "assets/engine.jpg", caption: "worked on engine" },
     { src: "assets/speaker.jpg", caption: "speaker installed" },
-    { src: "assests/screenjpg.jpg", caption: "screen installed" },
-    { src: "assests/car.jpg", caption: "My shitty car" },
-    { src: "assests/wires.jpg", caption: "red if the tastiest" }
+    { src: "assets/screenjpg.jpg", caption: "screen installed" },
+    { src: "assets/car.jpg", caption: "My shitty car" },
+    { src: "assets/wires.jpg", caption: "red if the tastiest" }
 ];
-const imageItems = images.map((img) => createElement("div", { className: "image-card" }, CreateImage(img.src, "image-item"), createElement("p", { className: "image-caption" }, img.caption)));
+const imageItems = images.map((img, index) => createElement("div", { className: "image-card", key: `img-${index}` }, CreateImage(img.src, "image-item"), createElement("p", { className: "image-caption" }, img.caption)));
 //end images creation
 //rendering
 const root = createRoot(document.getElementById("root"));

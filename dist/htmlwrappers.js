@@ -18,9 +18,10 @@ export class HTMLElements {
 export function divWrapperElements(elements, divprop, angleStep = 0) {
     const group = [];
     let angle = 0;
-    for (const element of elements) {
+    for (let i = 0; i < elements.length; i++) {
+        const element = elements[i];
         const inner = createElement("div", { className: "circle-rot", style: { transform: `rotate(${angle}deg)` } }, element);
-        group.push(new HTMLElements("div", divprop, inner).toJSX());
+        group.push(new HTMLElements("div", { ...divprop, key: `circle-${i}` }, inner).toJSX());
         angle += angleStep;
     }
     return group;
