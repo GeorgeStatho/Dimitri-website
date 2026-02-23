@@ -25,21 +25,26 @@ export class HTMLElements {
 //const outer = new HTMLElements("div", { className: "box" },inner.toJSX());
 
 //const jsx = outer.toJSX(); // <div class="box"><span>Inner text</span></div>
-export function divWrapperElements(elements:React.ReactElement[],divprop:Record<string,unknown>,angleStep=0):React.ReactElement[]{
+export function divWrapperElements(
+  elements: React.ReactElement[],
+  divprop: Record<string, unknown>,
+  angleStep = 0
+): React.ReactElement[] {
   const group: React.ReactElement[] = [];
   let angle = 0;
 
-  for (const element of elements) {
+  for (let i = 0; i < elements.length; i++) {
+    const element = elements[i];
     const inner = createElement(
       "div",
       { className: "circle-rot", style: { transform: `rotate(${angle}deg)` } },
       element
     );
 
-    group.push(new HTMLElements("div", divprop, inner).toJSX());
+    group.push(new HTMLElements("div", { ...divprop, key: `circle-${i}` }, inner).toJSX());
     angle += angleStep;
   }
-  return group
+  return group;
 }
 
 export function divWrap(

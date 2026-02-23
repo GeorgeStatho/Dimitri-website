@@ -50,17 +50,18 @@ const rightCircles = divWrapperElements(
 //end creating circles
 
 //images creating
-const images = [{src: "./assets/dashboard.jpg", caption:"The man himself"},
-  {src:"assets/engine.jpg",caption: "worked on engine"},
-  {src:"assets/speaker.jpg",caption: "speaker installed"},
-  {src:"assests/screenjpg.jpg",caption:"screen installed"},
-  {src:"assests/car.jpg",caption:"My shitty car"},
-  {src:"assests/wires.jpg",caption:"red if the tastiest"}
+const images = [
+  { src: "./assets/dashboard.jpg", caption: "dashboard" },
+  { src: "assets/engine.jpg", caption: "worked on engine" },
+  { src: "assets/speaker.jpg", caption: "speaker installed" },
+  { src: "assets/screenjpg.jpg", caption: "screen installed" },
+  { src: "assets/car.jpg", caption: "My shitty car" },
+  { src: "assets/wires.jpg", caption: "red if the tastiest" }
 ];
-const imageItems = images.map((img) =>
+const imageItems = images.map((img, index) =>
   createElement(
     "div",
-    { className: "image-card" },
+    { className: "image-card", key: `img-${index}` },
     CreateImage(img.src, "image-item"),
     createElement("p", { className: "image-caption" }, img.caption)
   )
