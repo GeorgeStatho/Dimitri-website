@@ -1,7 +1,6 @@
 import React, { createElement, JSX } from "react";
 import { createRoot } from "react-dom/client";
-import { HTMLElements, divWrapperElements, divWrap, innershadowdefs, Footer, Title, CreateImage } from "./htmlwrappers";
-import "./Firstpage.css";
+import { HTMLElements, divWrapperElements, divWrap, innershadowdefs, Footer, Title, CreateImage } from "./htmlwrappers.js";
 
 //circle functions
 function createCircRect(x:number,y:number){
